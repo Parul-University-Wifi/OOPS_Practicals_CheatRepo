@@ -1,0 +1,27 @@
+Define an interface Shape which has a getArea method. Define a class Circle which implements the Shape
+interface. Circle has radius as instance variable and a constructor to initialize the radius. Override the toString
+method to display radius and area of circle. Define a main to create a Circle object and display it.
+
+
+interface Shape {
+double getArea();
+}
+class Circle implements Shape {
+private double radius;
+public Circle(double r) {
+radius = r;
+}
+public double getArea() {
+return Math.PI * Math.pow(radius, 2);
+}
+public String toString() {
+double area = getArea();
+return String.format("radius: %.1f, area: %.1f", radius, area);
+}
+}
+class Main {
+public static void main(String[] args) {
+Circle c = new Circle(5.2);
+System.out.println(c);
+}
+}

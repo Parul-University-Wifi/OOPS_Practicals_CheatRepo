@@ -1,0 +1,18 @@
+Input names of 5 countries and store them in an ArrayList, sort them in ascending order of names, display the
+name of the first country in the list after sorting.
+
+
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+ArrayList<String> list = new ArrayList<>();
+System.out.println("5 countries:");
+for (int i = 1; i <= 5; ++i) {
+String c = sc.nextLine();
+list.add(c);
+}
+Collections.sort(list);
+System.out.println("First country: " + list.get(0));
+}
+}
